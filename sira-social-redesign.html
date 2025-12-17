@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sira Social - Performance Marketing Agency in Pune, India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: -200px;
+            right: -100px;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Location Badge */
+        .location-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #718096;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .service-card p {
+            color: #718096;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        /* Data Insights Section */
+        .insights {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .insight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insight-card::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+        }
+
+        .insight-value {
+            font-size: 3rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .insight-label {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 3rem;
+            color: #667eea;
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            color: #2d3748;
+        }
+
+        .author-info p {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #f6ad55;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .process-timeline {
+            max-width: 1000px;
+            margin: 3rem auto;
+            position: relative;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            min-width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .step-content p {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+
+        /* Pune Focus Section */
+        .pune-focus {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+        }
+
+        .pune-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .pune-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pune-features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .pune-features li {
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .pune-features li::before {
+            content: '📍';
+            font-size: 1.5rem;
+        }
+
+        .pune-stats {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .pune-stat {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .pune-stat:last-child {
+            border-bottom: none;
+        }
+
+        .pune-stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .contact-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item p {
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            height: 100%;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content, .contact-grid, .pune-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SIRA.SOCIAL</div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#insights">Results</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <div class="location-badge">
+                    📍 Serving D2C Brands Across Pune & India
+                </div>
+                <h1>Performance Marketing That Actually Performs</h1>
+                <p>We help D2C and eCommerce brands in Pune scale profitably with data-driven Google Ads and Meta Ads campaigns. No fluff, just measurable ROI.</p>
+                <a href="#contact" class="cta-button">Get Your Free Audit</a>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">₹50L+</span>
+                        <span class="stat-label">Ad Spend Managed</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">4.8X</span>
+                        <span class="stat-label">Average ROAS</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Brands Scaled</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Placeholder for hero image/animation -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Growth Engines We Master</h2>
+                <p>Comprehensive performance marketing services tailored for D2C brands and eCommerce businesses</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Google Ads Management</h3>
+                    <p>Stop wasting ad spend on ineffective campaigns. Our certified Google Ads experts deliver predictable, scalable growth with advanced targeting and optimization strategies.</p>
+                    <ul class="service-features">
+                        <li>Search Campaign Optimization</li>
+                        <li>Shopping Ads for eCommerce</li>
+                        <li>Performance Max Campaigns</li>
+                        <li>YouTube Ads for Brand Awareness</li>
+                        <li>Display Remarketing</li>
+                        <li>Conversion Rate Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Meta Ads (Facebook & Instagram)</h3>
+                    <p>Scale 3X faster with our certified Meta experts. We create stunning, scroll-stopping visuals and ad copy that dramatically improve conversion rates and ROAS.</p>
+                    <ul class="service-features">
+                        <li>Creative Strategy & Design</li>
+                        <li>Carousel & Collection Ads</li>
+                        <li>Stories & Reels Ads</li>
+                        <li>Advanced Audience Targeting</li>
+                        <li>Retargeting Campaigns</li>
+                        <li>A/B Testing & Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>Shopify & Website Development</h3>
+                    <p>Transform your online presence with custom, high-converting Shopify stores built for sales. We handle everything from design to setup and product migration.</p>
+                    <ul class="service-features">
+                        <li>Custom Shopify Store Design</li>
+                        <li>Conversion-Optimized Landing Pages</li>
+                        <li>Mobile-First Responsive Design</li>
+                        <li>Payment Gateway Integration</li>
+                        <li>SEO-Friendly Architecture</li>
+                        <li>Store Migration & Setup</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Full-Funnel Marketing Strategy</h3>
+                    <p>We map the entire customer journey from awareness to conversion using proven three-stage funnel strategies that turn leads into lifelong customers.</p>
+                    <ul class="service-features">
+                        <li>Customer Journey Mapping</li>
+                        <li>Top-of-Funnel Awareness Campaigns</li>
+                        <li>Mid-Funnel Engagement Strategies</li>
+                        <li>Bottom-Funnel Conversion Optimization</li>
+                        <li>Retention & Loyalty Programs</li>
+                        <li>Analytics & Performance Tracking</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Creative & Content Production</h3>
+                    <p>Our performance-driven creative team produces thumb-stopping ad creatives that align perfectly with your campaign strategy for maximum impact.</p>
+                    <ul class="service-features">
+                        <li>Ad Creative Design & Video</li>
+                        <li>Product Photography</li>
+                        <li>Copywriting for Conversions</li>
+                        <li>User-Generated Content Strategy</li>
+                        <li>Brand Identity Development</li>
+                        <li>Content Calendar Management</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Track every rupee spent with our comprehensive analytics setup and transparent reporting. Know exactly where your growth is coming from.</p>
+                    <ul class="service-features">
+                        <li>Google Analytics 4 Setup</li>
+                        <li>Conversion Tracking Implementation</li>
+                        <li>Custom Dashboard Creation</li>
+                        <li>Weekly Performance Reports</li>
+                        <li>ROI & ROAS Tracking</li>
+                        <li>Actionable Insights & Recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Insights Section -->
+    <section id="insights" class="insights">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real Results, Real Numbers</h2>
+                <p>Our data-driven approach delivers measurable outcomes for D2C and eCommerce brands</p>
+            </div>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <span class="insight-value">₹50L+</span>
+                    <span class="insight-label">Total Ad Spend Managed</span>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-value">4.8X</span>
+                    <span class="insight-label">Average Return on Ad Spend</span>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-value">50+</span>
+                    <span class="insight-label">Brands Successfully Scaled</span>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-value">68%</span>
+                    <span class="insight-label">Average CAC Reduction</span>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-value">3.2X</span>
+                    <span class="insight-label">Average Revenue Growth</span>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-value">2-3mo</span>
+                    <span class="insight-label">Time to Profitable Scale</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Proven Process</h2>
+                <p>A systematic approach that transforms ad spend into profitable revenue</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Discovery & Audit</h3>
+                        <p>We analyze your current marketing performance, identify gaps, and uncover opportunities. Free comprehensive audit of your existing campaigns and funnel.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Strategy Development</h3>
+                        <p>Custom performance marketing strategy tailored to your business goals, target audience, and budget. We map out the complete customer journey.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Campaign Launch</h3>
+                        <p>We set up tracking, create high-performing ad creatives, and launch optimized campaigns across Google and Meta platforms with proper targeting.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Optimization & Scaling</h3>
+                        <p>Continuous testing, data analysis, and optimization to improve performance. Once we prove profitability, we aggressively scale your campaigns.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Reporting & Growth</h3>
+                        <p>Transparent weekly reports with actionable insights. We work as your growth partner, constantly finding new opportunities to scale efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from real businesses we've helped scale</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">Sira Social transformed our ad campaigns completely. Our ROAS increased from 2.1X to 5.3X in just 3 months. Their team's expertise in Meta ads is exceptional, and they genuinely care about our growth.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">RT</div>
+                        <div class="author-info">
+                            <h4>Rohan Thakkar</h4>
+                            <p>Founder, Fashion D2C Brand</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">Working with Sira Social has been a game-changer for our eCommerce business. They reduced our CAC by 58% while scaling our revenue 3X. Their transparent reporting and strategic approach make them stand out.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">AP</div>
+                        <div class="author-info">
+                            <h4>Anika Patil</h4>
+                            <p>Marketing Head, Health & Wellness Brand</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">Best decision we made was partnering with Sira Social. They revamped our Shopify store and launched Google Shopping campaigns that generated ₹2.8Cr in revenue in 6 months. Highly recommend!</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">SK</div>
+                        <div class="author-info">
+                            <h4>Sameer Kulkarni</h4>
+                            <p>CEO, Home Decor eCommerce</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">The creative team at Sira Social produces amazing content that actually converts. Our click-through rates doubled, and conversion rates improved by 45%. They understand what works in the Indian market.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">PM</div>
+                        <div class="author-info">
+                            <h4>Priya Mehta</h4>
+                            <p>Co-founder, Beauty & Skincare Brand</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">Professional, data-driven, and results-oriented. Sira Social helped us crack profitable scaling on Google Ads after we struggled for months. Their strategic approach and constant optimization delivered consistent growth.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">VM</div>
+                        <div class="author-info">
+                            <h4>Vikram More</h4>
+                            <p>Director, Electronics eCommerce</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">Their full-funnel approach is what sets them apart. From awareness to conversion, every touchpoint is optimized. Our customer lifetime value increased by 65% while maintaining profitable acquisition costs.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">NS</div>
+                        <div class="author-info">
+                            <h4>Neha Shah</h4>
+                            <p>Growth Manager, Fitness Equipment Brand</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pune Focus Section -->
+    <section class="pune-focus">
+        <div class="pune-grid">
+            <div class="pune-content">
+                <h2>Performance Marketing Experts in Pune</h2>
+                <p>Based in Baner, Pune, we're deeply connected to the local D2C and eCommerce ecosystem. Our team understands the unique challenges and opportunities for businesses operating in Pune and across Maharashtra.</p>
+                <ul class="pune-features">
+                    <li>Local market expertise and insights</li>
+                    <li>Face-to-face consultations at our Balewadi office</li>
+                    <li>Understanding of regional consumer behavior</li>
+                    <li>Experience with Pune's growing startup ecosystem</li>
+                    <li>Connections with local vendors and partners</li>
+                    <li>Timezone alignment for real-time support</li>
+                </ul>
+            </div>
+            <div class="pune-stats">
+                <div class="pune-stat">
+                    <span class="pune-stat-value">30+</span>
+                    <span class="insight-label">Pune-Based Brands Served</span>
+                </div>
+                <div class="pune-stat">
+                    <span class="pune-stat-value">₹25L+</span>
+                    <span class="insight-label">Revenue Generated for Pune Businesses</span>
+                </div>
+                <div class="pune-stat">
+                    <span class="pune-stat-value">150%</span>
+                    <span class="insight-label">Avg. Growth for Local Clients</span>
+                </div>
+                <div class="pune-stat">
+                    <span class="pune-stat-value">4.9/5</span>
+                    <span class="insight-label">Client Satisfaction Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Grow Your Business</h2>
+                <p>Get in touch for a free performance marketing audit and strategy consultation</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:info@sirasocial.com">info@sirasocial.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:+919028129696">+91 90281 29696</a></p>
+                        <p><a href="tel:+919767273783">+91 97672 73783</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 Office Address</h3>
+                        <p>Balewadi High Street<br>
+                        Near Manali Hotel<br>
+                        Baner, Pune 411045<br>
+                        Maharashtra, India</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕒 Working Hours</h3>
+                        <p>Monday - Friday<br>
+                        10:00 AM - 7:00 PM IST</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <p>📍 Visit us at Balewadi High Street, Baner, Pune</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>SIRA.SOCIAL</strong> - Performance Marketing Agency</p>
+        <p>Helping D2C and eCommerce brands scale profitably with Google Ads and Meta Ads</p>
+        <div class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#insights">Results</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">© 2025 Sira Social. All rights reserved. | Based in Pune, Maharashtra, India</p>
+    </footer>
+</body>
+</html>
