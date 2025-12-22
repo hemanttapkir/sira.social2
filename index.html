@@ -370,19 +370,18 @@
                     </div>
                 </div>
                 <div class="card">
-                   <form action="https://formspree.io/f/xgvggrvr" method="POST">
-    <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); color: white; border-radius: 8px;">
-        
-        <input type="email" name="email" placeholder="Work Email" required style="width: 100%; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); color: white; border-radius: 8px;">
-        
-        <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); color: white; border-radius: 8px;">
-        
-       <input type="text" name="website" placeholder="Website URL" style="width: 100%; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); color: white; border-radius: 8px;">
-        <input type="text" name="Service Required" placeholder="Service Required" style="width: 100%; padding: 1rem; background: var(--bg-dark); border: 1px solid var(--border); color: white; border-radius: 8px;">
-        
-        <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Get Free Audit</button>
-    </div>
+                  <form id="auditForm">
+  <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Work Email" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="website" placeholder="Website URL">
+    <input type="text" name="service_required" placeholder="Service Required">
+
+    <button type="submit" class="btn btn-primary">Get Free Audit</button>
+
+  </div>
 </form>
                 </div>
             </div>
@@ -403,5 +402,40 @@
             btn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
         }
     </script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function () {
+  emailjs.init("kt4bf-V1OZ_kz_PYh");
+})();
+
+document.getElementById("auditForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  emailjs.send(
+    "service_k2t0kwu",
+    "template_wci4xqo",
+    {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      website: form.website.value,
+      service_required: form.service_required.value
+    }
+  ).then(
+    function () {
+      alert("Request sent successfully");
+      form.reset();
+    },
+    function (error) {
+      alert("Failed to send. Try again.");
+      console.error(error);
+    }
+  );
+});
+</script>
+    
 </body>
 </html>
