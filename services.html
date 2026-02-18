@@ -30,7 +30,7 @@
         
         header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(15, 17, 21, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); height: var(--nav-height); display: flex; align-items: center; }
         nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; color: white; text-decoration: none; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; color: white; text-decoration: none; margin-right: auto; }
         .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
         .nav-links a:hover { color: white; }
@@ -62,8 +62,7 @@
 <body>
 
     <header>
-        <div class="container">
-            <nav>
+        <nav class="container">
                 <a href="index.html" class="logo">SIRA<span class="gradient-text">.SOCIAL</span></a>
                 <button class="menu-btn" onclick="toggleMenu()">☰</button>
                 <ul class="nav-links" id="navLinks">
@@ -73,7 +72,6 @@
                     <li><a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Free Audit</a></li>
                 </ul>
             </nav>
-        </div>
     </header>
 
     <section class="section-padding" style="padding-top: 150px;">
@@ -108,7 +106,7 @@
 
             <div class="service-row">
                 <div class="service-content">
-                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Shopify Development</h2>
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Website Development</h2>
                     <p style="color: var(--text-muted); margin-bottom: 1.5rem;">We build high-speed Shopify stores designed for the Indian consumer psyche.</p>
                     <ul class="service-list">
                         <li><strong>Store Design:</strong> Custom Liquid coding.</li>
