@@ -20,7 +20,7 @@
         /* Nav */
         header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(15, 17, 21, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); height: var(--nav-height); display: flex; align-items: center; }
         nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; color: white; text-decoration: none; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; color: white; text-decoration: none; margin-right: auto;}
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
         .nav-links a:hover { color: white; }
@@ -43,8 +43,7 @@
 <body>
 
     <header>
-        <div class="container">
-            <nav>
+        <nav class="container">
                 <a href="index.html" class="logo">SIRA<span class="gradient-text">.SOCIAL</span></a>
                 <button class="menu-btn" onclick="toggleMenu()">☰</button>
                 <ul class="nav-links" id="navLinks">
@@ -54,7 +53,6 @@
                     <li><a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem; margin-left: 1rem;">Free Audit</a></li>
                 </ul>
             </nav>
-        </div>
     </header>
 
     <section class="section-padding" style="padding-top: 150px;">
@@ -94,7 +92,47 @@
             </div>
         </div>
     </section>
-
+ <section class="section-padding" style="padding-top: 150px;">
+        <div class="container">
+            <div class="grid-2" style="align-items: center;">
+                <div>
+                    <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem;">More Data.<br><span class="gradient-text">Less Fluff.</span></h1>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
+                        We started Sira Social in Pune because we were tired of agencies promising "brand awareness" without showing the bottom line. We are a team of engineers turned marketers.
+                    </p>
+                    <div style="display: flex; gap: 2rem;">
+                        <div>
+                            <span class="gradient-text" style="font-size: 2rem;">50+</span>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Active Clients</p>
+                        </div>
+                        <div>
+                            <span class="gradient-text" style="font-size: 2rem;">₹50Cr</span>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Revenue Generated</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Our Approach</h3>
+                    <div class="value-item">
+                        <h3>Step 1 — Audit</h3>
+                        <p style="color: var(--text-muted);">We break down your funnel, tracking, creatives, and customer journey.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Step 2 — Strategy</h3>
+                        <p style="color: var(--text-muted);">Channel mix. Budget allocation. Scaling roadmap.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Step 3 — Launch</h3>
+                        <p style="color: var(--text-muted);">High-converting creatives + structured campaigns.</p>
+                    </div>
+                       <div class="value-item">
+                        <h3>Step 4 — Optimize & Scale</h3>
+                        <p style="color: var(--text-muted);">Daily monitoring. Weekly reporting. Aggressive scaling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="contact" class="section-padding" style="background: #000;">
         <div class="container">
             <div class="grid-2">
